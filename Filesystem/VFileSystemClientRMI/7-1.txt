@@ -1,0 +1,38 @@
+7.1
+
+1. Remote Interface festlegen
+ - (API) Class [...] extends Remote
+
+2. Remote Interface implementieren
+ - (Impl) Class [...] extends UnicastRemoteObject
+ - Methoden throws RemoteException
+
+3. RMI Registry
+ - Namensdienst auf dem Server
+
+4. Dienste/Objekte auf Server Seite registrieren
+ - Registry erstellen
+   LocateRegistry.createRegistry(port);
+ - und anbinden
+   Naming.rebind(String, new FileSystemImpl(con));
+
+5. Dienst/Objekte von Client-Seite benennen und aufrufen
+ - LocateRegistry.getRegistry(hostname, port);
+   registry.lookup(String);
+
+6. Referenz auf entfernte Objekte
+ - Es werden die Remote-Objekte vom Server registriert und die Referenzen auf diese Remote-Objekte können von den Clients abgefragt werden
+
+
+
+(1. Der Server registriert ein Remote Object bei der RMI-Registry unter einem eindeutigen Namen.
+
+2. Der Client sieht bei der RMI-Registry unter diesem Namen nach und bekommt eine Objektreferenz, die seinem Remote Interface entsprechen muss.
+
+3. Der Client ruft eine Methode aus der Objektreferenz auf (dass diese Methode existiert, wird durch das Remote Interface garantiert). 
+Dabei kann ein Objekt einer Klasse X übergeben werden, die der JVM des Servers bisher nicht bekannt ist (das ist möglich, wenn X ein dem Server bekanntes 
+Interface implementiert). In diesem Fall lädt die Server-JVM die Klasse X dynamisch nach, beispielsweise vom Webserver des Client.
+
+4. Die Server-JVM führt die Methode auf dem Remote Object aus, wobei evtl. dynamisch geladener Fremdcode benutzt wird (z. B. Methoden von X), 
+der im Allgemeinen Sicherheitsrestriktionen unterliegt. Dem Client werden die Rückgabewerte dieses Aufrufes gesendet, oder der Client bekommt 
+eine Fehlermeldung (z. B. bei einem Verbindungsabbruch).)
