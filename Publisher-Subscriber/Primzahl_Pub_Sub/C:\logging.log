@@ -1,0 +1,7 @@
+2015-01-20 10:43:30 INFO  FailoverTransport:1055 - Successfully connected to tcp://localhost:61616
+2015-01-20 10:44:32 INFO  FailoverTransport:1055 - Successfully connected to tcp://localhost:61616
+2015-01-20 10:44:55 INFO  FailoverTransport:1055 - Successfully connected to tcp://localhost:61616
+2015-01-20 10:45:55 INFO  FailoverTransport:1055 - Successfully connected to tcp://localhost:61616
+2015-01-20 10:46:51 INFO  FailoverTransport:1055 - Successfully connected to tcp://localhost:61616
+2015-01-20 10:46:59 INFO  FailoverTransport:1055 - Successfully connected to tcp://localhost:61616
+2015-01-20 10:48:25 INFO  FailoverTransport:1055 - Successfully connected to tcp://localhost:61616

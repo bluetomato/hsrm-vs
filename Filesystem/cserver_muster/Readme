@@ -1,0 +1,22 @@
+Hochschule RheinMain
+B.Sc. Angewandte Informatik
+Verteilte Systeme Praktikum 
+
+WS 2014/2015
+
+Musterlösungsserver für Blatt 3
+
+Der Server ist auf einem Ubuntu 14.04.1 LTS für AMD64 übersetzt worden.
+
+Als Abhängigkeit wird libglib-2.0 benötigt (ist in der Praktikumsumgebung
+installiert).
+
+Das Ausführen des Servers auf login1 ist nicht möglich.
+
+Aufruf:
+
+./fileserver_amd64 <port>
+
+
+
+
