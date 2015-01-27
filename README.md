@@ -20,6 +20,7 @@ VFileSystemServerImpl:
 VFileSystemClient...:
 - Main starten (Java)
 
+______________________________________________________________________________________
 
 Publisher und Subscriber wurden in Java implementiert.
 
